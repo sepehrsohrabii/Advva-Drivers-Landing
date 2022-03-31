@@ -14,3 +14,16 @@ body {
     height: 100vh; /* for slider canvas background */
     scroll-behavior: smooth;
 }
+a, a:hover {
+  color: black;
+  text-decoration: none;
+}
+#slidervideo {
+  position: fixed;
+  z-index: -2;
+  top: 2%;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
