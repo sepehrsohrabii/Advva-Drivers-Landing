@@ -13,7 +13,9 @@
 
     <title>Advva Drivers</title>
     <link rel="icon" type="image/x-icon" href="">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
@@ -26,7 +28,7 @@
 <body>
 
         <header>
-          <nav class="navbar navbar-expand-md sticky-top bg-light">
+          <nav class="navbar navbar-expand-md fixed-top bg-light">
             <div class="container">
               <div class="col text-start">
                 <img src="/img/Logo.svg" alt="Advva Drivers Logo">
@@ -42,18 +44,295 @@
         
         
         <main>
-          <div class="container-fluid mt-5">
-            <!-- The Slider Background video -->
-            <video autoplay muted loop id="slidervideo" class="mt-5">
-              <source src="/img/Carvertise - Advertise On Uber, Lyft, and Grubhub Cars.mp4" type="video/mp4">
-            </video>
-            <H1>MONTHLY INCOME</br>DRIVING WITH ADVVA</H1>
-
+          <!-- The Slider Background video -->
+          <video autoplay muted loop id="slidervideo" class="mt-5">
+            <source src="/img/Carvertise - Advertise On Uber, Lyft, and Grubhub Cars.mp4" type="video/mp4">
+          </video>
+          <!-- Slider Content -->
+          <div class="container mt-5 vh-100 d-flex align-items-center justify-content-center">
+            <div class="row justify-content-center">
+              <h1 class="text-center mt-5">MONTHLY INCOME</br>DRIVING WITH ADVVA</h1>
+              <button class="button1 mt-5 py-2 px-5">Become a Driver</button>
+            </div>
+          </div>
+          <!-- Form Section -->
+          <div class="form-banner">
+            <div class="container">
+              <div class="row">
+                <div class="col py-5 pe-5 align-self-center">
+                  <h3 class="text-uppercase">Do not waste time</br>get started now.</h3>
+                  <h4 class="gray fw-normal">Advva, one of the largest advertising companies in California, is wrapping cars now.
+                    You can make extra money every month.
+                  </h4>
+                </div>
+                <div class="col form-margin bg-light p-5 text-center">
+                  <div class="box1 py-4 text-center">
+                    <h4>EARN $450 TO $1500</h4>
+                    <h4 class="fw-normal m-0">each campaign</h4>
+                  </div>
+                  <h6 class="my-5">Become a driver in just 3 easy steps</h6>
+                  <div class="d-flex justify-content-between mb-5">
+                    <div class="bar1 activate py-1"></div>
+                    <div class="bar1 py-1"></div>
+                    <div class="bar1 py-1"></div>
+                  </div>
+                  <input type="name" class="form-control my-3 p-3" placeholder="First Name">
+                  <input type="name" class="form-control my-3 p-3" placeholder="Last Name">
+                  <input type="email" class="form-control my-3 p-3" placeholder="Primary Email">
+                  <input type="tel" class="form-control my-3 p-3" placeholder="Primary Cell Phone Number">
+                  <button class="button2 mw-100 w-100 p-3 fw-bold">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile App Section -->
+          <div class="container mt-121">
+            <div class="row text-center">
+              <h2>Driver’s Mobile App</h2>
+              <h4 class="fw-normal">Earn monthly income driving with Advva</h4>
+            </div>
+            <div class="row mt-5">
+              <div class="col">
+                <h4 class="fw-normal text-center">
+                  <img class="me-1" src="/img/check.svg" alt="Check icon">
+                  No membership fee
+                </h4>
+              </div>
+              <div class="col">
+                <h4 class="fw-normal text-center">
+                  <img class="me-1" src="/img/check.svg" alt="Check icon">
+                  No first time fee
+                </h4>
+              </div>
+              <div class="col">
+                <h4 class="fw-normal text-center">
+                  <img class="me-1" src="/img/check.svg" alt="Check icon">
+                  Quick, and easy mobile app
+                </h4>
+              </div>
+            </div>
+          </div>
+          <!-- Full width mobiles app picture-->
+          <div class="text-center mbapp-pic">
+            <img src="/img/Mobile-App.png" alt="Advva Mobile App">
+          </div>
+          <div class="banner1 pb-5">
+            <div class="container py-5">
+              <div class="row text-center my-5">
+                <h2>How It Works</h2>
+                <h4 class="fw-normal">Drop us a line. We’ll respond asap.</h4>
+              </div>
+              <div class="row">
+                <div class="col text-center">
+                  <img src="/img/Driverapplication.svg" alt="Driverapplication"></br>
+                  <img class="my-4" src="/img/one.svg" alt="one">
+                  <h6>DRIVER APPLICATION</h6>
+                  <p class="px-5">We ask some simple questions about where you normally drive</p>
+                </div>
+                <div class="col text-center">
+                  <img src="/img/Mach.svg" alt="Match"></br>
+                  <img class="my-4" src="/img/two.svg" alt="two">
+                  <h6>MATCH</h6>
+                  <p class="px-5">We ask some simple questions about where you normally drive</p>
+                </div>
+                <div class="col text-center">
+                  <img src="/img/wrap.svg" alt="wrap"></br>
+                  <img class="my-4" src="/img/three.svg" alt="three">
+                  <h6>WRAP</h6>
+                  <p class="px-5">We ask some simple questions about where you normally drive</p>
+                </div>
+                <div class="col text-center">
+                  <img src="/img/driveandlearn.svg" alt="drive and earn"></br>
+                  <img class="my-4" src="/img/four.svg" alt="four">
+                  <h6>DRIVE & EARN</h6>
+                  <p class="px-5">We ask some simple questions about where you normally drive</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="banner2 py-5">
+            <div class="container my-5">
+              <div class="row">
+                <div class="col-7 text-start"><img src="/img/car1.jpg" alt="advva car 1" height="300px"></div>
+                <div class="col-5 text-end"><img src="/img/car2.jpg" alt="advva car 2" height="300px"></div>
+              </div>
+              <div class="row justify-content-between mt-4">
+                <div class="col text-start"><img src="/img/car3.jpg" alt="advva car 3" height="300px"></div>
+                <div class="col text-center"><img src="/img/car4.jpg" alt="advva car 4" height="300px"></div>
+                <div class="col text-end"><img src="/img/car5.jpg" alt="advva car 5" height="300px"></div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="container my-5 py-5">
+            <div class="row">
+              <h2 class="color1 text-center">WRAPPING PROCESS</h2>
+            </div>
+            <div class="row my-5 py-5">
+              <div class="col-6 align-self-center">
+                <h4 class="fw-normal">
+                  <img class="me-1" src="/img/check.svg" alt="Check icon">
+                  No membership fee.
+                </h4>
+                <h4 class="fw-normal">
+                  <img class="me-1" src="/img/check.svg" alt="Check icon">
+                  Wrap and unwrap for free.
+                </h4>
+                <h4 class="fw-normal">
+                  <img class="me-1" src="/img/check.svg" alt="Check icon">
+                  Wrap and unwrap by professionals.
+                </h4>
+              </div>
+              <div class="col-6">
+                <img src="/img/luxcar.jpg" alt="Advva Lux car" width="100%">
+              </div>
+            </div>
+          </div>
+          <div class="banner3 text-center my-5 py-5">
+            <h4 class="fw-bold white mt-5">Don’t miss your next opportunity!</h4>
+            <button class="button1 mb-5 mt-4 py-2 px-5">Sign up today</button>
+          </div>
+          <div class="container my-5 py-5">
+            <div class="row text-center mb-5">
+              <h2>DRIVE SMARTER, LIVE HAPPIER</h2>
+            </div>
+            <div class="row">
+              <div class="col-7">
+                <div class="card img-fluid">
+                  <img class="card-img-top image-cover" src="/img/video1.jpg" alt="advva video 1" height="510px">
+                  <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <a href="#"><img src="/img/play-icon.svg" alt="play icon"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-5">
+                <div class="card img-fluid mb-4">
+                  <img class="card-img-top image-cover" src="/img/video2.jpg" alt="advva video 1" height="240px">
+                  <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <a href="#"><img src="/img/play-icon.svg" alt="play icon"></a>
+                  </div>
+                </div>
+                <div class="card img-fluid">
+                  <img class="card-img-top image-cover" src="/img/video3.jpg" alt="advva video 1" height="240px">
+                  <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <a href="#"><img src="/img/play-icon.svg" alt="play icon"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="banner4 py-5">
+            <div class="container d-flex my-5">
+              <div class="col-4 align-self-center ">
+                <h3 class="black">FAQs</h3>
+              </div>
+              <div class="col-8">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <h6>Do I have to pay anything to get started?</h6>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <h6>How much money will I make?</h6>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <h6>I’ve received emails offering to wrap my car and pay upwards of $400 per week.
+                          Are these real opportunities?</h6>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingfour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">
+                        <h6>Do I get to pick what brand goes on my car?</h6>
+                      </button>
+                    </h2>
+                    <div id="flush-collapsefour" class="accordion-collapse collapse" aria-labelledby="flush-headingfour" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                    </div>
+                  </div>
+                </div>
+                <a class="red fw-bold" href="">Show More</a>
+              </div>
+            </div>
+          </div>
+          <!-- Form Section -->
+          <div class="form-banner2">
+            <div class="container">
+              <div class="row">
+                <div class="col py-5 pe-5 align-self-center">
+                  <h3 class="text-uppercase">EASY TO JOIN</br>EFFORTLESS TO EARN</h3>
+                  <h4 class="gray fw-normal">Advva, one of the largest advertising companies in California, is wrapping cars now.
+                    You can make extra money every month.
+                  </h4>
+                </div>
+                <div class="col form-margin bg-light p-5 text-center">
+                  <div class="box1 py-4 text-center">
+                    <h4>EARN $450 TO $1500</h4>
+                    <h4 class="fw-normal m-0">each campaign</h4>
+                  </div>
+                  <h6 class="my-5">Become a driver in just 3 easy steps</h6>
+                  <div class="d-flex justify-content-between mb-5">
+                    <div class="bar1 activate py-1"></div>
+                    <div class="bar1 py-1"></div>
+                    <div class="bar1 py-1"></div>
+                  </div>
+                  <input type="name" class="form-control my-3 p-3" placeholder="First Name">
+                  <input type="name" class="form-control my-3 p-3" placeholder="Last Name">
+                  <input type="email" class="form-control my-3 p-3" placeholder="Primary Email">
+                  <input type="tel" class="form-control my-3 p-3" placeholder="Primary Cell Phone Number">
+                  <button class="button2 mw-100 w-100 p-3 fw-bold">Next</button>
+                </div>
+              </div>
+            </div>
           </div>
         </main>
         
         <footer>
-
+          <div class="container py-5">
+            <div class="row my-4 py-4 justify-content-around">
+              <div class="col-2">
+                <img src="/img/Logo.svg" alt="Advva Logo">
+              </div>
+              <div class="col-2">
+                <h6 class="fw-normal">
+                  FOLLOW US
+                </h6>
+                <img src="/img/instagram.svg" alt="advva instagram">
+                <img src="/img/linkedin.svg" alt="advva linkedin">
+                <img src="/img/facebook.svg" alt="advva facebook">
+              </div>
+              <div class="col-6">
+                <p>Advva, one of the largest advertising companies in California, is wrapping cars now.
+                  You can make extra money every month.
+                </p>
+                <div class="d-flex justify-content-between">
+                  <p><b>Advertising & Marketing Agency</b></p>
+                  <p>Ⓒ 2022 Advva Inc.</p>
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
         </footer>
     
     

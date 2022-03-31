@@ -3,8 +3,8 @@ body {
     font-weight: 400;
     line-height: 1.666em;
     letter-spacing: .01em;
-    font-size: 16px;
-    color: #485666;
+    font-size: 12px;
+    color: #000000;
     max-width: 100vw;
     direction: ltr;
     unicode-bidi: isolate;
@@ -14,16 +14,139 @@ body {
     height: 100vh; /* for slider canvas background */
     scroll-behavior: smooth;
 }
+.gray {
+  color: #CACACA;
+}
+.white {
+  color: #ffffff;
+}
+.black {
+  color: #000000;
+}
+.red {
+  color: #F2642E;
+}
 a, a:hover {
   color: black;
   text-decoration: none;
 }
+@media (min-width: 769px) {
+  h1{
+    font-size: 48px;
+    font-weight: 900;
+    color: black;
+  }
+  h2{
+    font-size: 40px;
+    font-weight: 900;
+    color: black;
+  }
+  h3 {
+    font-size: 32px;
+    font-weight: 900;
+    color: white;
+  }
+  h4 {
+    font-size: 24px;
+    font-weight: 900;
+    color: black;
+  }
+  h6{
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+  }
+  .mt-121{
+    margin-top: 121px;
+  }
+}
+.form-control {
+  background-color: #EDEDED;
+  border: none;
+  border-radius: 0;
+}
+.button1{
+  color: white;
+  background-color: #F2642E;
+  max-width: fit-content !important;
+  border: none;
+}
+.button2{
+  color: white;
+  background-color: #F2642E;
+  
+  border: none;
+}
 #slidervideo {
-  position: fixed;
+  position: absolute;
   z-index: -2;
   top: 2%;
   right: 0;
   bottom: 0;
   min-width: 100%; 
   min-height: 100%;
+  opacity: 0.3;
+}
+.form-banner {
+  background-color: #504B8B;
+  background-image: linear-gradient(135deg, #504B8B 60%, rgba(242, 100, 46, 0.5));
+}
+.form-banner2 {
+  background-color: #504B8B;
+  background-image: linear-gradient(135deg, #504B8B 60%, rgba(62, 242, 46, 0.3));
+}
+.box1 {
+  background-color: #FACAB7;
+}
+.bar1.activate {
+  background: #FACAB7;
+}
+.bar1{
+  background: #e4e4e4;
+  width: 31%;
+}
+.form-margin {
+  margin-top: -65px;
+  margin-bottom: 65px;
+}
+.mbapp-pic {
+  z-index: -1;
+  margin-top: -80px;
+}
+.mbapp-pic > img {
+  inline-size: -webkit-fill-available;
+}
+.banner1{
+  background-color: #ffffff;
+  background-image: linear-gradient(135deg, rgba(241, 218, 210, 0.5) 30%, #ffffff);
+}
+.banner2{
+  background-color: #504B8B;
+  background-image: linear-gradient(90deg, rgba(162, 186, 137, 0.5), #504B8B);
+}
+.color1 {
+  color: #4F4C7E;
+}
+.banner3 {
+  background-color: #504B8B;
+  background-image: linear-gradient(90deg, #504B8B, rgba(241, 218, 210, 0.5));
+}
+.banner4 {
+  background-color: #FBF0F0;
+}
+.image-cover {
+  object-fit: cover;
+}
+.accordion-button, .accordion-item {
+  background: none;
+}
+.accordion-button {
+  padding-left: 0;
+}
+.accordion-button:focus {
+  border-color: none;
+  box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+  background-color: unset;
 }
