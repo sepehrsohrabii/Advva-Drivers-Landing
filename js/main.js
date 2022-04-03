@@ -1,9 +1,15 @@
 $(document).ready(function() {
-/* How it works section */
-$(".option").click(function(){
-  $(".option").removeClass("active");
-  $(this).addClass("active");
-  
+/* Form Section */
+const form = document.getElementById('form');
+const steps = document.querySelectorAll('#steps span');
+form.addEventListener('slide.bs.carousel', function (e) {
+  steps.forEach((step, index) => {
+    if(e.to >= index){
+      step.classList.add('activate');
+    }else{
+      step.classList.remove('activate');
+    }
+  });
 });
 /* gallery section */
 console.clear();

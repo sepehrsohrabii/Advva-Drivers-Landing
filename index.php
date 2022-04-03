@@ -1,3 +1,44 @@
+<?php
+
+    // Check if User Coming From A Request
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        
+        // Assign Variables
+        $user = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+        $mail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+        
+        $msg  = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+        
+        // Creating Array of Errors
+        $formErrors = array();
+        if (strlen($user) <= 3) {
+            $formErrors[] = 'Username Must Be Larger Than <strong>3</strong> Characters';
+        }
+        if (strlen($msg) < 10) {
+            $formErrors[] = 'Message Can\'t Be Less Than <strong>10</strong> Characters'; 
+        }
+        
+        // If No Errors Send The Email [ mail(To, Subject, Message, Headers, Parameters) ]
+        
+        $headers = 'From: ' . $mail . '\r\n';
+        $myEmail = 'info@creative.studio';
+        $subject = 'Contact Form';
+        
+        if (empty($formErrors)) {
+            
+            mail($myEmail, $subject, $msg, $headers);
+            
+            $user = '';
+            $mail = '';
+            
+            $msg = '';
+            
+            $success = '<div class="alert alert-success">We Have Recieved Your Message</div>';
+            
+        }
+        
+    }
+?>
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -85,12 +126,25 @@
                     <span id="step-3" class="bar1 py-1"></span>
                   </div>
                       
-                  <form id="form" action="" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel">
+                  <form id="form" action="<?php echo $_SERVER['PHP_SELF'] ?>" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel" method="POST">
+                    <?php if (! empty($formErrors)) { ?>
+                    <div class="alert alert-danger alert-dismissible" role="start">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <?php
+                            foreach($formErrors as $error) {
+                                echo $error . '<br/>';
+                            }
+                        ?>
+                    </div>
+                    <?php } ?>
+                    <?php if (isset($success)) { echo $success; } ?>
                     <div class="carousel-inner">
                       <div id="form1" class="carousel-item active shadow">
-                        <input id="fname" name="fname" type="name" class="form-control my-3 p-3" placeholder="First Name">
+                        <input id="fname" name="fname" type="name" class="form-control my-3 p-3" placeholder="First Name" value="<?php if (isset($user)) { echo $user; } ?>">
                         <input id="lname" name="lname" type="name" class="form-control my-3 p-3" placeholder="Last Name">
-                        <input id="email" name="email" type="email" class="form-control my-3 p-3" placeholder="Primary Email">
+                        <input id="email" name="email" type="email" class="form-control my-3 p-3" placeholder="Primary Email" value="<?php if (isset($mail)) { echo $mail; } ?>">
                         <input id="tel" name="tel" type="tel" class="form-control my-3 p-3" placeholder="Primary Cell Phone Number">
                         <button type="button" class="button2 mw-100 w-100 p-3 fw-bold" data-bs-target="#form" data-bs-slide-to="1">Next</button>
                       </div>
@@ -112,7 +166,7 @@
                         <input id="tel" name="tel" type="tel" class="form-control my-3 p-3" placeholder="Primary Cell Phone Number">
                         <div class="d-flex">
                           <button type="button" class="col btn2-silver p-3 fw-bold" data-bs-target="#form" data-bs-slide-to="1">Previous</button>
-                          <button type="button" class="col btn2-green p-3 fw-bold" data-bs-target="#form" data-bs-slide-to="2">Next</button>
+                          <button type="submit" value="Send" class="col btn2-green p-3 fw-bold" data-bs-target="#form" data-bs-slide-to="2">Next</button>
                         </div>
                       </div>
                     </div>
