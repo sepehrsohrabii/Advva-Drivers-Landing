@@ -106,7 +106,7 @@
             </svg>
           </div>
           <!-- The Slider Background video -->
-          <video autoplay muted loop id="slidervideo" class="mt-5">
+          <video autoplay muted loop id="slidervideo" class="mt-5" controlsList="nodownload">
             <source src="/img/Carvertise - Advertise On Uber, Lyft, and Grubhub Cars.mp4" type="video/mp4">
           </video>
           <!-- Slider Content -->
