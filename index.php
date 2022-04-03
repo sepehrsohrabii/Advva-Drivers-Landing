@@ -59,13 +59,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
-    <!-- estefade nemishe felan
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-    -->
     
 </head>
 <body>
@@ -73,13 +68,30 @@
         <header>
           <nav class="navbar navbar-expand-md fixed-top bg-light">
             <div class="container">
-              <div class="col text-start">
+              <div class="col align-self-center text-start">
                 <img src="/img/Logo.svg" height="60px" alt="Advva Drivers Logo">
               </div>
-              <div class="col text-end">
+              <div class="col align-self-center text-end d-none d-md-inline">
                 <a href=""><b>Become Partner</b></a>
                 <img class="mx-3" src="/img/H-Line.svg" alt="Seperator Line">
                 <a href=""><b class="text-secondary">Become Driver</b></a>
+              </div>
+              <div class="col align-self-center text-end d-md-none">
+                <button class="navbar-toggle" id="toggle" type="button">
+                  <svg viewBox="0 0 100 100" width="50">
+                    <path class="line top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                    <path class="line middle"d="m 30,50 h 40" />
+                    <path class="line bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+                  </svg>
+                </button>
+                <div class="navbar-new" id="toggle-nav">
+                  <ul id="navlinks">
+                    <li><a data-text="1" href="#">Become Partner</a></li>
+                    <li><a data-text="2" href="#">Become Driver</a></li>
+                    
+                  </ul>
+                </div>
+                <div id="bg-circle"></div>
               </div>
             </div>
           </nav> 
@@ -247,41 +259,76 @@
           
           <!-- Gallery Section -->
           <div class="section-6 banner2 py-5">
-            <div class="container my-5 d-none">
-              
-              <div id="mycanvas"></div>
-              <div class="grid js-grid">
-                <div><figure class="js-plane" data-src="/img/car1.jpg"></figure></div>
-                <div><figure class="js-plane" data-src="/img/car2.jpg"></figure></div>
-                <div><figure class="js-plane" data-src="/img/car3.jpg"></figure></div>
-                <div><figure class="js-plane" data-src="/img/car4.jpg"></figure></div>
-                <div><figure class="js-plane" data-src="/img/car5.jpg"></figure></div>
-                <div><figure class="js-plane" data-src="/img/car1.jpg"></figure></div>
-                <div><figure class="js-plane" data-src="/img/car2.jpg"></figure></div>
-                <div><figure class="js-plane" data-src="/img/car3.jpg"></figure></div>
-                <div><figure class="js-plane" data-src="/img/car4.jpg"></figure></div>
-                <div><figure class="js-plane" data-src="/img/car5.jpg"></figure></div>
-                <div><figure class="js-plane" data-src="/img/car1.jpg"></figure></div>
-                <div><figure class="js-plane" data-src="/img/car2.jpg"></figure></div>
-                <div><figure class="js-plane" data-src="/img/car3.jpg"></figure></div>
-                <div><figure class="js-plane" data-src="/img/car4.jpg"></figure></div>
-                <div><figure class="js-plane" data-src="/img/car5.jpg"></figure></div>
-              </div>
-              
-              <div class="page js-page">
-              
-              </div>
+            <div class="container overflow-hidden my-5">
+              <section class="section-gallery gallery">
+                <div class="row gallery-row"> 
+                  <div class="gallery__image-container">
+                    <img src="/img/car1.jpg" alt="" class="gallery__image">
+                  </div>
+                  <div class="gallery__image-container">
+                    <img src="/img/car2.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
+                  <div class="gallery__image-container">
+                    <img src="/img/car3.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
+                  <div class="gallery__image-container">
+                    <img src="/img/car4.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
+                </div>
+                <div class="row gallery-row">
+                  <div class="gallery__image-container">
+                    <img src="/img/car5.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
+                  <div class="gallery__image-container">
+                    <img src="/img/car1.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
+                  <div class="gallery__image-container">
+                    <img src="/img/car2.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
+                  <div class="gallery__image-container">
+                    <img src="/img/car3.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
+                </div>
+                <div class="row gallery-row">
+                  <div class="gallery__image-container">
+                    <img src="/img/car4.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div> 
+                  <div class="gallery__image-container">
+                    <img src="/img/car5.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
+                  <div class="gallery__image-container">
+                    <img src="/img/car1.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
+                  <div class="gallery__image-container">
+                    <img src="/img/car2.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
+                </div>
+                <div class="row gallery-row">
+                  <div class="gallery__image-container">
+                    <img src="/img/car3.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div> 
+                  <div class="gallery__image-container">
+                    <img src="/img/car4.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
+                  <div class="gallery__image-container">
+                    <img src="/img/car5.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
+                  <div class="gallery__image-container">
+                    <img src="/img/car1.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
+                </div>
+              </section>
               
             </div>
           </div>
          
           <!-- Wrapping Process Section -->
           <div class="overflow-hidden">
-            <div class="section-7 container my-5 py-5">
+            <div class="section-7 container my-5 pt-5 py-md-5">
               <div class="row section-25">
                 <h2 class="color1 text-center">WRAPPING PROCESS</h2>
               </div>
-              <div class="row my-5 py-md-5">
+              <div class="row mt-5 my-md-5 py-md-5">
                 <div class="section-26 col-12 col-md-6 order-2 order-md-1 align-self-center pt-5 pt-md-0 text-center text-md-start">
                   <h4 class="fw-normal">
                     <img class="me-1" src="/img/check.svg" alt="Check icon">
@@ -305,7 +352,7 @@
           
           <!-- SingUp Banner -->
           <div class="section-8 banner3 text-center my-5 py-5">
-            <h4 class="fw-bold white mt-5">Don’t miss your next opportunity!</h4>
+            <h4 class="fw-bold white mt-5 p-5">Don’t miss your next opportunity!</h4>
             <button class="section-28 button1 mb-5 mt-4 py-2 px-5">Sign up today</button>
           </div>
           <!-- Video Section -->
@@ -432,7 +479,7 @@
           <div class="section-12 container mt-md-0 mt-121 py-md-5">
             <div class="section-37 row my-md-4 py-md-4 justify-content-around">
               <div class="col-12 col-md-2 align-self-center text-center text-md-start">
-                <img class="section-38" src="/img/Logo.svg" alt="Advva Logo">
+                <img class="section-38" src="/img/Logo.svg" alt="Advva Logo" height="60px">
               </div>
               <div class="col-12 col-md-2 align-self-center text-center text-md-start mt-4 mt-md-0">
                 <h6 class="fw-normal">
@@ -460,33 +507,10 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!-- estefade nemishe felan
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="/js/owl.carousel.min.js"></script>
-    -->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/ScrollTrigger.min.js"></script>
-    <script src="/js/three.js"></script>
-    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
-
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three/build/three.module.js"
-        }
-      }
-    </script>
-
-    <script type="module">
-
-      import * as THREE from 'three';
-
-      const scene = new THREE.Scene();
-
-    </script>
-
-   
+  
     <script src="/js/main.js"></script>
 </body>
 </html>
