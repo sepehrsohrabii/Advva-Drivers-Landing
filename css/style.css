@@ -267,15 +267,15 @@ h6{
   bottom: 0;
   min-width: 100%; 
   min-height: 100%;
-  opacity: 0.3;
+  opacity: 0.45;
 }
 .form-banner {
   background-color: #504B8B;
-  background-image: linear-gradient(135deg, #504B8B 60%, rgba(242, 100, 46, 0.5));
+  background-image: linear-gradient(135deg, #504B8B, rgba(242, 100, 46, 0.5));
 }
 .form-banner2 {
   background-color: #504B8B;
-  background-image: linear-gradient(135deg, #504B8B 60%, rgba(62, 242, 46, 0.3));
+  background-image: linear-gradient(135deg, #504B8B, rgba(62, 242, 46, 0.3));
 }
 .box1 {
   background-color: #FACAB7;
@@ -294,15 +294,15 @@ h6{
   background-image: linear-gradient(135deg, rgba(241, 218, 210, 0.5) 30%, #ffffff);
 }
 .banner2{
-  background-color: #FACAB7;
-  background-image: linear-gradient(90deg, white, #FACAB7);
+  background-color: rgba(234, 151, 94, 1);
+  background-image: linear-gradient(90deg, rgba(161, 186, 137, 0.5), rgba(234, 151, 94, 1));
 }
 .color1 {
   color: #4F4C7E;
 }
 .banner3 {
-  background-color: #504B8B;
-  background-image: linear-gradient(90deg, #504B8B, rgba(241, 218, 210, 0.5));
+  background-color: #EA975E;
+  background-image: linear-gradient(90deg, #EA975E, rgba(241, 218, 210, 0.5));
 }
 .banner4 {
   background-color: #FBF0F0;

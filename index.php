@@ -26,12 +26,25 @@
         // If No Errors Send The Email [ mail(To, Subject, Message, Headers, Parameters) ]
         
         $headers = 'From: ' . $email . '\r\n';
+        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
         $myEmail = 'info@advva.com';
         $subject = 'Contact Form';
+        $message = "<html><body>";
+        $message .= "<div>First Name: </div>" . strip_tags($_POST['fname']) ."</br>";
+        $message .= "<div>Last Name: </div>" . strip_tags($_POST['lname']) ."</br>";
+        $message .= "<div>Email: </div>" . strip_tags($_POST['email']) ."</br>";
+        $message .= "<div>Phone Number: </div>" . strip_tags($_POST['tel']) ."</br>";
+        $message .= "<div>Car Model: </div>" . strip_tags($_POST['car']) ."</br>";
+        $message .= "<div>How did you hear about us: </div>" . strip_tags($_POST['ads']) ."</br>";
+        $message .= "<div>Describe your driving routine: </div>" . strip_tags($_POST['msg']) ."</br>";
+        $message .= "<div>Home City: </div>" . strip_tags($_POST['homecity']) ."</br>";
+        $message .= "<div>Work City: </div>" . strip_tags($_POST['workcity']) ."</br>";
+        $message .= "<div>Average miles driven each week: </div>" . strip_tags($_POST['averagemiles']) ."</br>";
+        $message .= "</body></html>";
         
         if (empty($formErrors)) {
             
-            mail($myEmail, $subject, $tel, $headers);
+            mail($myEmail, $subject, $message, $headers);
             
             $fname = '';
             $lname = '';
@@ -124,7 +137,7 @@
           </div>
           <!-- The Slider Background video -->
           <video autoplay muted loop id="slidervideo" class="mt-5">
-            <source src="/img/Carvertise - Advertise On Uber, Lyft, and Grubhub Cars.mp4" type="video/mp4">
+            <source src="/img/advva driver.mp4" type="video/mp4">
           </video>
           <!-- Slider Content -->
           <div class="section-1 container mt-5 vh-100 d-flex align-items-center justify-content-center" id="smooth-wrapper">
@@ -138,14 +151,13 @@
             <div class="container">
               <div class="row justify-content-center justify-content-md-between">
                 <div class="section-13 col-md-6 col-12 py-5 mt-5 mt-md-0 pe-md-5 align-self-center text-center text-md-start">
-                  <h3 class="text-uppercase">Do not waste time</br>get started now.</h3>
-                  <h4 class="gray fw-normal pe-md-5 ps-md-0 px-4">Advva, one of the largest advertising companies in California, is wrapping cars now.
-                    You can make extra money every month.
+                  <h3 class="text-uppercase">Making money has </br>never been this easy.</h3>
+                  <h4 class="gray fw-normal pe-md-5 ps-md-0 px-4">ADVVA is the state-of-the-art and largest advertising firm in the United States and Canada.
                   </h4>
                 </div>
                 <div class="section-14 col-md-5 col-11 form-margin bg-light p-4 p-md-5 text-center" id="sign_up">
                   <div class="box1 py-4 text-center">
-                    <h4>EARN $450 TO $1500</h4>
+                    <h4>EARN $300 TO $2000</h4>
                     <h4 class="fw-normal m-0">each campaign</h4>
                   </div>
                   <h6 class="my-5">Become a driver in just 3 easy steps</h6>
@@ -224,13 +236,13 @@
               <div class="col-12 col-md-4 section-17">
                 <h4 class="fw-normal text-center">
                   <img class="me-1" src="/img/check.svg" alt="Check icon">
-                  No first time fee
+                  Easy to operate
                 </h4>
               </div>
               <div class="col-12 col-md-4 section-18">
                 <h4 class="fw-normal text-center">
                   <img class="me-1" src="/img/check.svg" alt="Check icon">
-                  Quick, and easy mobile app
+                  Lots of ways to save money
                 </h4>
               </div>
             </div>
@@ -251,25 +263,25 @@
                   <img class="section-21" src="/img/Driverapplication.svg" alt="Driverapplication"></br>
                   <img class="my-4" src="/img/one.svg" alt="one">
                   <h6>DRIVER APPLICATION</h6>
-                  <p class="px-5">We ask some simple questions about where you normally drive</p>
+                  <p class="px-5">Fill out this short and easy form</p>
                 </div>
                 <div class="col-12 col-md-3 text-center mt-5 mt-md-0">
                   <img class="section-22" src="/img/Mach.svg" alt="Match"></br>
                   <img class="my-4" src="/img/two.svg" alt="two">
                   <h6>MATCH</h6>
-                  <p class="px-5">We ask some simple questions about where you normally drive</p>
+                  <p class="px-5">Advva matches you with a specific campaign</p>
                 </div>
                 <div class="col-12 col-md-3 text-center mt-5 mt-md-0">
                   <img class="section-23" src="/img/wrap.svg" alt="wrap"></br>
                   <img class="my-4" src="/img/three.svg" alt="three">
                   <h6>WRAP</h6>
-                  <p class="px-5">We ask some simple questions about where you normally drive</p>
+                  <p class="px-5">Advva notify you and wrap your car for FREE</p>
                 </div>
                 <div class="col-12 col-md-3 text-center mt-5 mt-md-0">
                   <img class="section-24" src="/img/driveandlearn.svg" alt="drive and earn"></br>
                   <img class="my-4" src="/img/four.svg" alt="four">
                   <h6>DRIVE & EARN</h6>
-                  <p class="px-5">We ask some simple questions about where you normally drive</p>
+                  <p class="px-5">Install the Advva APP, become a driver, and get monthly income by direct deposit</p>
                 </div>
               </div>
               
@@ -299,41 +311,41 @@
                     <img src="/img/car5.jpg" alt="Advva Gallery Pictures" class="gallery__image">
                   </div>
                   <div class="gallery__image-container">
-                    <img src="/img/car1.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                    <img src="/img/lux3.jpg" alt="Advva Gallery Pictures" class="gallery__image">
                   </div>
                   <div class="gallery__image-container">
-                    <img src="/img/car2.jpg" alt="Advva Gallery Pictures" class="gallery__image">
-                  </div>
-                  <div class="gallery__image-container">
-                    <img src="/img/car3.jpg" alt="Advva Gallery Pictures" class="gallery__image">
-                  </div>
-                </div>
-                <div class="row gallery-row">
-                  <div class="gallery__image-container">
-                    <img src="/img/car4.jpg" alt="Advva Gallery Pictures" class="gallery__image">
-                  </div> 
-                  <div class="gallery__image-container">
-                    <img src="/img/car5.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                    <img src="/img/lux.jpg" alt="Advva Gallery Pictures" class="gallery__image">
                   </div>
                   <div class="gallery__image-container">
                     <img src="/img/car1.jpg" alt="Advva Gallery Pictures" class="gallery__image">
                   </div>
-                  <div class="gallery__image-container">
-                    <img src="/img/car2.jpg" alt="Advva Gallery Pictures" class="gallery__image">
-                  </div>
                 </div>
                 <div class="row gallery-row">
                   <div class="gallery__image-container">
-                    <img src="/img/car3.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                    <img src="/img/car2.jpg" alt="Advva Gallery Pictures" class="gallery__image">
                   </div> 
+                  <div class="gallery__image-container">
+                    <img src="/img/car3.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
                   <div class="gallery__image-container">
                     <img src="/img/car4.jpg" alt="Advva Gallery Pictures" class="gallery__image">
                   </div>
                   <div class="gallery__image-container">
                     <img src="/img/car5.jpg" alt="Advva Gallery Pictures" class="gallery__image">
                   </div>
+                </div>
+                <div class="row gallery-row">
+                  <div class="gallery__image-container">
+                    <img src="/img/lux3.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div> 
+                  <div class="gallery__image-container">
+                    <img src="/img/lux.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
                   <div class="gallery__image-container">
                     <img src="/img/car1.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                  </div>
+                  <div class="gallery__image-container">
+                    <img src="/img/car2.jpg" alt="Advva Gallery Pictures" class="gallery__image">
                   </div>
                 </div>
               </section>
@@ -466,14 +478,13 @@
             <div class="container">
               <div class="row justify-content-center justify-content-md-between">
                 <div class="section-35 col-md-6 col-12 mt-5 mt-md-0 py-5 pe-md-5 align-self-center text-center text-md-start">
-                  <h3 class="text-uppercase">EASY TO JOIN</br>EFFORTLESS TO EARN</h3>
-                  <h4 class="gray fw-normal pe-md-5">Advva, one of the largest advertising companies in California, is wrapping cars now.
-                    You can make extra money every month.
+                  <h3 class="text-uppercase">Become a Driver Today.</h3>
+                  <h4 class="gray fw-normal pe-md-5">ADVVA takes advertising to a new different level by advertising business on individual cars.
                   </h4>
                 </div>
                 <div class="section-36 col-md-5 col-11 form-margin bg-light p-4 p-md-5 text-center" id="sign_up2">
                   <div class="box1 py-4 text-center">
-                    <h4>EARN $450 TO $1500</h4>
+                    <h4>EARN $300 TO $2000</h4>
                     <h4 class="fw-normal m-0">each campaign</h4>
                   </div>
                   <h6 class="my-5">Become a driver in just 3 easy steps</h6>
@@ -548,8 +559,8 @@
                 <h6 class="fw-normal">
                   FOLLOW US
                 </h6>
-                <img src="/img/instagram.svg" alt="advva instagram">
-                <img src="/img/linkedin.svg" alt="advva linkedin">
+                <a href="https://www.instagram.com/advvainc/"><img src="/img/instagram.svg" alt="advva instagram"></a>
+                
                 <img src="/img/facebook.svg" alt="advva facebook">
               </div>
               <div class="col-12 col-md-6 align-self-center text-center text-md-start mt-4 mt-md-0">
