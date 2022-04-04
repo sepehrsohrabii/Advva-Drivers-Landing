@@ -1,5 +1,6 @@
 $(document).ready(function() {
 /* Form Section */
+
 const form = document.getElementById('form');
 const steps = document.querySelectorAll('#steps span');
 form.addEventListener('slide.bs.carousel', function (e) {
@@ -11,10 +12,21 @@ form.addEventListener('slide.bs.carousel', function (e) {
     }
   });
 });
+
+const formtwo = document.getElementById('formtwo');
+const stepstwo = document.querySelectorAll('#stepstwo span');
+
+formtwo.addEventListener('slide.bs.carousel', function (e) {
+  stepstwo.forEach((step, index) => {
+    if(e.to >= index){
+      step.classList.add('activate');
+    }else{
+      step.classList.remove('activate');
+    }
+  });
+});
 /* gallery section */
 const galleryRows = document.querySelectorAll('.gallery-row');
-
-
 galleryRows.forEach((el, index) => {
   
   let direction;

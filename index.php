@@ -4,36 +4,53 @@
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         // Assign Variables
-        $user = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-        $mail = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-        
-        $msg  = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+        $fname = filter_var($_POST['fname'], FILTER_SANITIZE_STRING);
+        $lname = filter_var($_POST['lname'], FILTER_SANITIZE_STRING);
+        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+        $tel  = filter_var($_POST['tel'], FILTER_SANITIZE_NUMBER_INT);
+
+        $car = filter_var($_POST['car'], FILTER_SANITIZE_STRING);
+        $ads = filter_var($_POST['ads'], FILTER_SANITIZE_STRING);
+        $msg = filter_var($_POST['msg'], FILTER_SANITIZE_STRING);
+
+        $homecity = filter_var($_POST['homecity'], FILTER_SANITIZE_STRING);
+        $workcity = filter_var($_POST['workcity'], FILTER_SANITIZE_STRING);
+        $averagemiles = filter_var($_POST['averagemiles'], FILTER_SANITIZE_NUMBER_FLOAT);
         
         // Creating Array of Errors
         $formErrors = array();
-        if (strlen($user) <= 3) {
+        if (strlen($fname) <= 3) {
             $formErrors[] = 'Username Must Be Larger Than <strong>3</strong> Characters';
-        }
-        if (strlen($msg) < 10) {
-            $formErrors[] = 'Message Can\'t Be Less Than <strong>10</strong> Characters'; 
         }
         
         // If No Errors Send The Email [ mail(To, Subject, Message, Headers, Parameters) ]
         
-        $headers = 'From: ' . $mail . '\r\n';
-        $myEmail = 'info@creative.studio';
+        $headers = 'From: ' . $email . '\r\n';
+        $myEmail = 'info@advva.com';
         $subject = 'Contact Form';
         
         if (empty($formErrors)) {
             
-            mail($myEmail, $subject, $msg, $headers);
+            mail($myEmail, $subject, $tel, $headers);
             
-            $user = '';
-            $mail = '';
-            
+            $fname = '';
+            $lname = '';
+            $email = '';
+            $tel = '';
+
+            $car = '';
+            $ads = '';
             $msg = '';
+
+            $homecity = '';
+            $workcity = '';
+            $averagemiles = '';
             
-            $success = '<div class="alert alert-success">We Have Recieved Your Message</div>';
+            $success = '<div class="alert alert-success alert-dismissible" role="alert">
+                          
+                          We Have Recieved Your Message
+                          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>';
             
         }
         
@@ -53,7 +70,7 @@
     <meta itemprop="url" content="">
 
     <title>Advva Drivers</title>
-    <link rel="icon" type="image/x-icon" href="">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -106,14 +123,14 @@
             </svg>
           </div>
           <!-- The Slider Background video -->
-          <video autoplay muted loop id="slidervideo" class="mt-5" controlsList="nodownload">
+          <video autoplay muted loop id="slidervideo" class="mt-5">
             <source src="/img/Carvertise - Advertise On Uber, Lyft, and Grubhub Cars.mp4" type="video/mp4">
           </video>
           <!-- Slider Content -->
           <div class="section-1 container mt-5 vh-100 d-flex align-items-center justify-content-center" id="smooth-wrapper">
             <div class="row justify-content-center" id="smooth-content">
               <h1 class="text-center mt-5">MONTHLY INCOME</br>DRIVING WITH ADVVA</h1>
-              <button class="button1 mt-5 py-2 px-5">Become a Driver</button>
+              <a class="button1 mt-5 py-2 px-5" href="#sign_up">Become a Driver</a>
             </div>
           </div>
           <!-- Form Section -->
@@ -122,11 +139,11 @@
               <div class="row justify-content-center justify-content-md-between">
                 <div class="section-13 col-md-6 col-12 py-5 mt-5 mt-md-0 pe-md-5 align-self-center text-center text-md-start">
                   <h3 class="text-uppercase">Do not waste time</br>get started now.</h3>
-                  <h4 class="gray fw-normal pe-md-5">Advva, one of the largest advertising companies in California, is wrapping cars now.
+                  <h4 class="gray fw-normal pe-md-5 ps-md-0 px-4">Advva, one of the largest advertising companies in California, is wrapping cars now.
                     You can make extra money every month.
                   </h4>
                 </div>
-                <div class="section-14 col-md-5 col-11 form-margin bg-light p-4 p-md-5 text-center">
+                <div class="section-14 col-md-5 col-11 form-margin bg-light p-4 p-md-5 text-center" id="sign_up">
                   <div class="box1 py-4 text-center">
                     <h4>EARN $450 TO $1500</h4>
                     <h4 class="fw-normal m-0">each campaign</h4>
@@ -140,9 +157,9 @@
                       
                   <form id="form" action="<?php echo $_SERVER['PHP_SELF'] ?>" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel" method="POST">
                     <?php if (! empty($formErrors)) { ?>
-                    <div class="alert alert-danger alert-dismissible" role="start">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true"></span>
                         </button>
                         <?php
                             foreach($formErrors as $error) {
@@ -153,32 +170,34 @@
                     <?php } ?>
                     <?php if (isset($success)) { echo $success; } ?>
                     <div class="carousel-inner">
-                      <div id="form1" class="carousel-item active shadow">
-                        <input id="fname" name="fname" type="name" class="form-control my-3 p-3" placeholder="First Name" value="<?php if (isset($user)) { echo $user; } ?>">
-                        <input id="lname" name="lname" type="name" class="form-control my-3 p-3" placeholder="Last Name">
-                        <input id="email" name="email" type="email" class="form-control my-3 p-3" placeholder="Primary Email" value="<?php if (isset($mail)) { echo $mail; } ?>">
-                        <input id="tel" name="tel" type="tel" class="form-control my-3 p-3" placeholder="Primary Cell Phone Number">
+                      <div id="form1" class="carousel-item active">
+                        <input id="fname" name="fname" type="name" class="form-control my-3 p-3" placeholder="First Name" value="<?php if (isset($fname)) { echo $fname; } ?>">
+                        <input id="lname" name="lname" type="name" class="form-control my-3 p-3" placeholder="Last Name" value="<?php if (isset($lname)) { echo $lname; } ?>">
+                        <input id="email" name="email" type="email" class="form-control my-3 p-3" placeholder="Primary Email" value="<?php if (isset($email)) { echo $email; } ?>">
+                        <input id="tel" name="tel" type="tel" class="form-control my-3 p-3" placeholder="Primary Cell Phone Number" value="<?php if (isset($tel)) { echo $tel; } ?>">
                         <button type="button" class="button2 mw-100 w-100 p-3 fw-bold" data-bs-target="#form" data-bs-slide-to="1">Next</button>
                       </div>
-                      <div id="form2" class="carousel-item shadow">
-                        <input id="fname" name="fname" type="name" class="form-control my-3 p-3" placeholder="First Name">
-                        <input id="lname" name="lname" type="name" class="form-control my-3 p-3" placeholder="Last Name">
-                        <input id="email" name="email" type="email" class="form-control my-3 p-3" placeholder="Primary Email">
-                        <input id="tel" name="tel" type="tel" class="form-control my-3 p-3" placeholder="Primary Cell Phone Number">
+                      <div id="form2" class="carousel-item">
+                        <input id="car" name="car" type="name" class="form-control my-3 p-3" placeholder="Car Brand/Model/Color" value="<?php if (isset($car)) { echo $car; } ?>">
+                        <input id="ads" name="ads" type="name" class="form-control my-3 p-3" placeholder="How did you hear about us?" value="<?php if (isset($ads)) { echo $ads; } ?>">
+                        <textarea name="msg" id="msg" class="form-control my-3 p-3" rows="5" placeholder="Describe your driving routine">
+                          <?php if (isset($msg)) { echo $msg; } ?>
+                        </textarea>
                         <div class="d-flex">
                           <button type="button" class="col btn2-silver p-3 fw-bold" data-bs-target="#form" data-bs-slide-to="0">Previous</button>
                           <button type="button" class="col button2 p-3 fw-bold" data-bs-target="#form" data-bs-slide-to="2">Next</button>
                         </div>
                         
                       </div>
-                      <div id="form3" class="carousel-item shadow">
-                        <input id="fname" name="fname" type="name" class="form-control my-3 p-3" placeholder="First Name">
-                        <input id="lname" name="lname" type="name" class="form-control my-3 p-3" placeholder="Last Name">
-                        <input id="email" name="email" type="email" class="form-control my-3 p-3" placeholder="Primary Email">
-                        <input id="tel" name="tel" type="tel" class="form-control my-3 p-3" placeholder="Primary Cell Phone Number">
-                        <div class="d-flex">
+                      <div id="form3" class="carousel-item">
+                        <input id="homecity" name="homecity" type="name" class="form-control my-3 p-3" placeholder="Home City" value="<?php if (isset($homecity)) { echo $homecity; } ?>">
+                        <input id="workcity" name="workcity" type="name" class="form-control my-3 p-3" placeholder="Work City" value="<?php if (isset($workcity)) { echo $workcity; } ?>">
+                        <input id="averagemiles" name="averagemiles" type="number" class="form-control my-3 p-3" placeholder="Average miles driven each week" value="<?php if (isset($averagemiles)) { echo $averagemiles; } ?>">
+                        <input id="checkbox" name="checkbox" type="checkbox" required>
+                        <label for="checkbox">I allow Advva to contact me via email/phone</label>
+                        <div class="d-flex mt-3">
                           <button type="button" class="col btn2-silver p-3 fw-bold" data-bs-target="#form" data-bs-slide-to="1">Previous</button>
-                          <button type="submit" value="Send" class="col btn2-green p-3 fw-bold" data-bs-target="#form" data-bs-slide-to="2">Next</button>
+                          <button type="submit" value="Send" class="col btn2-green p-3 fw-bold" data-bs-target="#form">Submit</button>
                         </div>
                       </div>
                     </div>
@@ -353,7 +372,7 @@
           <!-- SingUp Banner -->
           <div class="section-8 banner3 text-center my-5 py-5">
             <h4 class="fw-bold white mt-5 p-5">Don’t miss your next opportunity!</h4>
-            <button class="section-28 button1 mb-5 mt-4 py-2 px-5">Sign up today</button>
+            <a href="#sign_up2"><button class="section-28 button1 mb-5 mt-4 py-2 px-5" href="#sign_up2">Sign up today</button></a>
           </div>
           <!-- Video Section -->
           <div class="section-9 container my-5 py-5">
@@ -452,22 +471,66 @@
                     You can make extra money every month.
                   </h4>
                 </div>
-                <div class="section-36 col-md-5 col-11 form-margin bg-light p-4 p-md-5 text-center">
+                <div class="section-36 col-md-5 col-11 form-margin bg-light p-4 p-md-5 text-center" id="sign_up2">
                   <div class="box1 py-4 text-center">
                     <h4>EARN $450 TO $1500</h4>
                     <h4 class="fw-normal m-0">each campaign</h4>
                   </div>
                   <h6 class="my-5">Become a driver in just 3 easy steps</h6>
-                  <div class="d-flex justify-content-between mb-5">
-                    <div class="bar1 activate py-1"></div>
-                    <div class="bar1 py-1"></div>
-                    <div class="bar1 py-1"></div>
+                  <div id="stepstwo" class="d-flex justify-content-between mb-4">
+                    <span id="step-1" class="bar1 activate py-1"></span>
+                    <span id="step-2" class="bar1 py-1"></span>
+                    <span id="step-3" class="bar1 py-1"></span>
                   </div>
-                  <input type="name" class="form-control my-3 p-3" placeholder="First Name">
-                  <input type="name" class="form-control my-3 p-3" placeholder="Last Name">
-                  <input type="email" class="form-control my-3 p-3" placeholder="Primary Email">
-                  <input type="tel" class="form-control my-3 p-3" placeholder="Primary Cell Phone Number">
-                  <button class="button2 mw-100 w-100 p-3 fw-bold">Next</button>
+                      
+                  <form id="formtwo" action="<?php echo $_SERVER['PHP_SELF'] ?>" class="carousel slide" data-bs-interval="false" data-bs-ride="carousel" method="POST">
+                    <?php if (! empty($formErrors)) { ?>
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true"></span>
+                        </button>
+                        <?php
+                            foreach($formErrors as $error) {
+                                echo $error . '<br/>';
+                            }
+                        ?>
+                    </div>
+                    <?php } ?>
+                    <?php if (isset($success)) { echo $success; } ?>
+                    <div class="carousel-inner">
+                      <div id="form21" class="carousel-item active">
+                        <input id="fname" name="fname" type="name" class="form-control my-3 p-3" placeholder="First Name" value="<?php if (isset($fname)) { echo $fname; } ?>">
+                        <input id="lname" name="lname" type="name" class="form-control my-3 p-3" placeholder="Last Name" value="<?php if (isset($lname)) { echo $lname; } ?>">
+                        <input id="email" name="email" type="email" class="form-control my-3 p-3" placeholder="Primary Email" value="<?php if (isset($email)) { echo $email; } ?>">
+                        <input id="tel" name="tel" type="tel" class="form-control my-3 p-3" placeholder="Primary Cell Phone Number" value="<?php if (isset($tel)) { echo $tel; } ?>">
+                        <button type="button" class="button2 mw-100 w-100 p-3 fw-bold" data-bs-target="#formtwo" data-bs-slide-to="1">Next</button>
+                      </div>
+
+                      <div id="form22" class="carousel-item">
+                        <input id="car" name="car" type="name" class="form-control my-3 p-3" placeholder="Car Brand/Model/Color" value="<?php if (isset($car)) { echo $car; } ?>">
+                        <input id="ads" name="ads" type="name" class="form-control my-3 p-3" placeholder="How did you hear about us?" value="<?php if (isset($ads)) { echo $ads; } ?>">
+                        <textarea name="msg" id="msg" class="form-control my-3 p-3" rows="5" placeholder="Describe your driving routine">
+                          <?php if (isset($msg)) { echo $msg; } ?>
+                        </textarea>
+                        <div class="d-flex">
+                          <button type="button" class="col btn2-silver p-3 fw-bold" data-bs-target="#formtwo" data-bs-slide-to="0">Previous</button>
+                          <button type="button" class="col button2 p-3 fw-bold" data-bs-target="#formtwo" data-bs-slide-to="2">Next</button>
+                        </div>
+                      </div>
+
+                      <div id="form23" class="carousel-item">
+                        <input id="homecity" name="homecity" type="name" class="form-control my-3 p-3" placeholder="Home City" value="<?php if (isset($homecity)) { echo $homecity; } ?>">
+                        <input id="workcity" name="workcity" type="name" class="form-control my-3 p-3" placeholder="Work City" value="<?php if (isset($workcity)) { echo $workcity; } ?>">
+                        <input id="averagemiles" name="averagemiles" type="number" class="form-control my-3 p-3" placeholder="Average miles driven each week" value="<?php if (isset($averagemiles)) { echo $averagemiles; } ?>">
+                        <input id="checkbox" name="checkbox" type="checkbox" required>
+                        <label for="checkbox">I allow Advva to contact me via email/phone</label>
+                        <div class="d-flex mt-3">
+                          <button type="button" class="col btn2-silver p-3 fw-bold" data-bs-target="#formtwo" data-bs-slide-to="1">Previous</button>
+                          <button type="submit" value="Send" class="col btn2-green p-3 fw-bold" data-bs-target="#formtwo">Submit</button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>

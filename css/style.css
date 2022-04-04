@@ -49,6 +49,10 @@ h6{
   font-weight: 700;
   color: black;
 }
+.form-control:focus {
+  border-color: unset !important;
+  box-shadow: unset !important;
+}
 @media (max-width:768px) {
   
   .mbapp-pic {
