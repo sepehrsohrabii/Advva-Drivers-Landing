@@ -1,6 +1,5 @@
 $(document).ready(function() {
 /* Form Section */
-
 const form = document.getElementById('form');
 const steps = document.querySelectorAll('#steps span');
 form.addEventListener('slide.bs.carousel', function (e) {

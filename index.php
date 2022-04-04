@@ -182,17 +182,17 @@
                     <?php } ?>
                     <?php if (isset($success)) { echo $success; } ?>
                     <div class="carousel-inner">
-                      <div id="form1" class="carousel-item active">
-                        <input id="fname" name="fname" type="name" class="form-control my-3 p-3" placeholder="First Name" value="<?php if (isset($fname)) { echo $fname; } ?>">
-                        <input id="lname" name="lname" type="name" class="form-control my-3 p-3" placeholder="Last Name" value="<?php if (isset($lname)) { echo $lname; } ?>">
-                        <input id="email" name="email" type="email" class="form-control my-3 p-3" placeholder="Primary Email" value="<?php if (isset($email)) { echo $email; } ?>">
-                        <input id="tel" name="tel" type="tel" class="form-control my-3 p-3" placeholder="Primary Cell Phone Number" value="<?php if (isset($tel)) { echo $tel; } ?>">
+                      <div id="form1" class="carousel-item active needs-validation" novalidate>
+                        <input id="fname" name="fname" type="name" class="form-control my-3 p-3" placeholder="First Name" value="<?php if (isset($fname)) { echo $fname; } ?>" required>
+                        <input id="lname" name="lname" type="name" class="form-control my-3 p-3" placeholder="Last Name" value="<?php if (isset($lname)) { echo $lname; } ?>" required>
+                        <input id="email" name="email" type="email" class="form-control my-3 p-3" placeholder="Primary Email" value="<?php if (isset($email)) { echo $email; } ?>" required>
+                        <input id="tel" name="tel" type="tel" class="form-control my-3 p-3" placeholder="Primary Cell Phone Number" value="<?php if (isset($tel)) { echo $tel; } ?>" required>
                         <button type="button" class="button2 mw-100 w-100 p-3 fw-bold" data-bs-target="#form" data-bs-slide-to="1">Next</button>
                       </div>
                       <div id="form2" class="carousel-item">
-                        <input id="car" name="car" type="name" class="form-control my-3 p-3" placeholder="Car Brand/Model/Color" value="<?php if (isset($car)) { echo $car; } ?>">
-                        <input id="ads" name="ads" type="name" class="form-control my-3 p-3" placeholder="How did you hear about us?" value="<?php if (isset($ads)) { echo $ads; } ?>">
-                        <textarea name="msg" id="msg" class="form-control my-3 p-3" rows="5" placeholder="Describe your driving routine">
+                        <input id="car" name="car" type="name" class="form-control my-3 p-3" placeholder="Car Brand/Model/Color" value="<?php if (isset($car)) { echo $car; } ?>" required>
+                        <input id="ads" name="ads" type="name" class="form-control my-3 p-3" placeholder="How did you hear about us?" value="<?php if (isset($ads)) { echo $ads; } ?>" required>
+                        <textarea name="msg" id="msg" class="form-control my-3 p-3" rows="5" placeholder="Describe your driving routine" required>
                           <?php if (isset($msg)) { echo $msg; } ?>
                         </textarea>
                         <div class="d-flex">
@@ -202,9 +202,9 @@
                         
                       </div>
                       <div id="form3" class="carousel-item">
-                        <input id="homecity" name="homecity" type="name" class="form-control my-3 p-3" placeholder="Home City" value="<?php if (isset($homecity)) { echo $homecity; } ?>">
-                        <input id="workcity" name="workcity" type="name" class="form-control my-3 p-3" placeholder="Work City" value="<?php if (isset($workcity)) { echo $workcity; } ?>">
-                        <input id="averagemiles" name="averagemiles" type="number" class="form-control my-3 p-3" placeholder="Average miles driven each week" value="<?php if (isset($averagemiles)) { echo $averagemiles; } ?>">
+                        <input id="homecity" name="homecity" type="name" class="form-control my-3 p-3" placeholder="Home City" value="<?php if (isset($homecity)) { echo $homecity; } ?>" required>
+                        <input id="workcity" name="workcity" type="name" class="form-control my-3 p-3" placeholder="Work City" value="<?php if (isset($workcity)) { echo $workcity; } ?>" required>
+                        <input id="averagemiles" name="averagemiles" type="number" class="form-control my-3 p-3" placeholder="Average miles driven each week" value="<?php if (isset($averagemiles)) { echo $averagemiles; } ?>" required>
                         <input id="checkbox" name="checkbox" type="checkbox" required>
                         <label for="checkbox">I allow Advva to contact me via email/phone</label>
                         <div class="d-flex mt-3">
@@ -560,11 +560,10 @@
                   FOLLOW US
                 </h6>
                 <a href="https://www.instagram.com/advvainc/"><img src="/img/instagram.svg" alt="advva instagram"></a>
-                
-                <img src="/img/facebook.svg" alt="advva facebook">
+                <a href="https://www.facebook.com/Advva-103036491994850"><img src="/img/facebook.svg" alt="advva facebook"></a>
               </div>
               <div class="col-12 col-md-6 align-self-center text-center text-md-start mt-4 mt-md-0">
-                <p>Advva, one of the largest advertising companies in California, is wrapping cars now.
+                <p>Advva, one of the largest advertising companies in the United States and Canada, is wrapping cars now.
                   You can make extra money every month.
                 </p>
                 <div class="d-md-flex justify-content-md-between mt-4 mt-md-0">
