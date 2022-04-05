@@ -389,7 +389,7 @@
           <!-- Video Section -->
           <div class="section-9 container my-5 py-5">
             <div class="section-29 row text-center mb-5">
-              <h2>DRIVE SMARTER, LIVE HAPPIER</h2>
+              <h2 class="text-uppercase">advertising to a new different level</h2>
             </div>
             <div class="row">
               <div class="col-12 col-md-7">
@@ -432,38 +432,76 @@
                         </button>
                       </h2>
                       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                        <div class="accordion-body">Driver does not pay to become a member, and there is no cost to wrap or unwrap the driver's car!</div>
                       </div>
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="flush-headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                          <h6>How much money will I make?</h6>
+                          <h6>How much money will I make each month?</h6>
                         </button>
                       </h2>
                       <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                        <div class="accordion-body">It depends on the size of the campaign. Each campaign has a different payout category. It starts from $300 and goes up to $2000.00 per month.</div>
                       </div>
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="flush-headingThree">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                          <h6>I’ve received emails offering to wrap my car and pay upwards of $400 per week.
-                            Are these real opportunities?</h6>
+                          <h6>Do I choose the campagin myself?</h6>
                         </button>
                       </h2>
                       <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                        <div class="accordion-body">
+                          You can choose which area you would like to drive for our campaign. We consider both your selection of the campaign and the business owner's choice.                        </div>
                       </div>
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="flush-headingfour">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">
-                          <h6>Do I get to pick what brand goes on my car?</h6>
+                          <h6>How do I get paid?</h6>
                         </button>
                       </h2>
                       <div id="flush-collapsefour" class="accordion-collapse collapse" aria-labelledby="flush-headingfour" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                        <div class="accordion-body">
+                          After selecting you as a driver, you provide your bank account information to us and we pay you by direct deposit.                        
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingfour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">
+                          <h6>How does my car gets wrapped?</h6>
+                        </button>
+                      </h2>
+                      <div id="flush-collapsefour" class="accordion-collapse collapse" aria-labelledby="flush-headingfour" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          We will provide you with our qualified wrap partners near your location.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingfour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">
+                          <h6>How do I track my mileage?</h6>
+                        </button>
+                      </h2>
+                      <div id="flush-collapsefour" class="accordion-collapse collapse" aria-labelledby="flush-headingfour" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                        Our mobile driver application will track all your mileage.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingfour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">
+                          <h6>What happens when a campaign is over?</h6>
+                        </button>
+                      </h2>
+                      <div id="flush-collapsefour" class="accordion-collapse collapse" aria-labelledby="flush-headingfour" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          One of our professional wrappings unwrap your car by one of our professional wrapping companies and we look for another campaign.
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -563,8 +601,8 @@
                 <a href="https://www.facebook.com/Advva-103036491994850"><img src="/img/facebook.svg" alt="advva facebook"></a>
               </div>
               <div class="col-12 col-md-6 align-self-center text-center text-md-start mt-4 mt-md-0">
-                <p>Advva, one of the largest advertising companies in the United States and Canada, is wrapping cars now.
-                  You can make extra money every month.
+                <p>Advva is the state-of-the-art and largest advertising firm in the United States and Canada.
+                   It takes advertising to a new different level by advertising business on individual cars.
                 </p>
                 <div class="d-md-flex justify-content-md-between mt-4 mt-md-0">
                   <p class=""><b>Advertising & Marketing Agency</b></p>
