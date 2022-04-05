@@ -27,6 +27,7 @@
         
         // $headers = 'From: ' . $email . '\r\n';
         $headers = 'From: advva@rs018.webhostbox.net';
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
         $myEmail = 'info@advva.com';
         $subject = 'Contact Form';
         $message = "<html><body>";
@@ -311,35 +312,21 @@
                     <img src="/img/car5.jpg" alt="Advva Gallery Pictures" class="gallery__image">
                   </div>
                   <div class="gallery__image-container">
-                    <img src="/img/lux3.jpg" alt="Advva Gallery Pictures" class="gallery__image">
-                  </div>
-                  <div class="gallery__image-container">
-                    <img src="/img/lux.jpg" alt="Advva Gallery Pictures" class="gallery__image">
-                  </div>
-                  <div class="gallery__image-container">
                     <img src="/img/car1.jpg" alt="Advva Gallery Pictures" class="gallery__image">
                   </div>
-                </div>
-                <div class="row gallery-row">
                   <div class="gallery__image-container">
                     <img src="/img/car2.jpg" alt="Advva Gallery Pictures" class="gallery__image">
-                  </div> 
+                  </div>
                   <div class="gallery__image-container">
                     <img src="/img/car3.jpg" alt="Advva Gallery Pictures" class="gallery__image">
                   </div>
-                  <div class="gallery__image-container">
-                    <img src="/img/car4.jpg" alt="Advva Gallery Pictures" class="gallery__image">
-                  </div>
-                  <div class="gallery__image-container">
-                    <img src="/img/car5.jpg" alt="Advva Gallery Pictures" class="gallery__image">
-                  </div>
                 </div>
                 <div class="row gallery-row">
                   <div class="gallery__image-container">
-                    <img src="/img/lux3.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                    <img src="/img/car4.jpg" alt="Advva Gallery Pictures" class="gallery__image">
                   </div> 
                   <div class="gallery__image-container">
-                    <img src="/img/lux.jpg" alt="Advva Gallery Pictures" class="gallery__image">
+                    <img src="/img/car5.jpg" alt="Advva Gallery Pictures" class="gallery__image">
                   </div>
                   <div class="gallery__image-container">
                     <img src="/img/car1.jpg" alt="Advva Gallery Pictures" class="gallery__image">

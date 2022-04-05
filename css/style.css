@@ -278,10 +278,11 @@ h6{
   background-image: linear-gradient(135deg, #504B8B, rgba(62, 242, 46, 0.3));
 }
 .box1 {
-  background-color: #FACAB7;
+  background-color: #ff932e;
+  background-image: linear-gradient(135deg, #ff932e, #ffe865);
 }
 .bar1.activate {
-  background: #FACAB7;
+  background: #F6C08C;
 }
 .bar1{
   background: #e4e4e4;
