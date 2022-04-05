@@ -137,7 +137,7 @@
           </div>
           <!-- The Slider Background video -->
           <video autoplay muted loop id="slidervideo" class="mt-5">
-            <source src="/img/advva driver.mp4" type="video/mp4">
+            <source src="/img/advva driver.MP4" type="video/mp4">
           </video>
           <!-- Slider Content -->
           <div class="section-1 container mt-5 vh-100 d-flex align-items-center justify-content-center" id="smooth-wrapper">
