@@ -26,7 +26,7 @@
         // If No Errors Send The Email [ mail(To, Subject, Message, Headers, Parameters) ]
         
         // $headers = 'From: ' . $email . '\r\n';
-        $headers = 'From: advva@rs018.webhostbox.net';
+        $headers = 'From: advva@rs018.webhostbox.net' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
         $myEmail = 'info@advva.com';
         $subject = 'Contact Form';
