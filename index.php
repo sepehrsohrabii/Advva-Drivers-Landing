@@ -193,9 +193,7 @@
                       <div id="form2" class="carousel-item">
                         <input id="car" name="car" type="name" class="form-control my-3 p-3" placeholder="Car Brand/Model/Color" value="<?php if (isset($car)) { echo $car; } ?>" required>
                         <input id="ads" name="ads" type="name" class="form-control my-3 p-3" placeholder="How did you hear about us?" value="<?php if (isset($ads)) { echo $ads; } ?>" required>
-                        <textarea name="msg" id="msg" class="form-control my-3 p-3" rows="5" placeholder="Describe your driving routine" required>
-                          <?php if (isset($msg)) { echo $msg; } ?>
-                        </textarea>
+                        <textarea name="msg" id="msg" class="form-control my-3 p-3" rows="5" placeholder="Describe your driving routine" required><?php if (isset($msg)) { echo $msg; } ?></textarea>
                         <div class="d-flex">
                           <button type="button" class="col btn2-silver p-3 fw-bold" data-bs-target="#form" data-bs-slide-to="0">Previous</button>
                           <button type="button" class="col button2 p-3 fw-bold" data-bs-target="#form" data-bs-slide-to="2">Next</button>
@@ -545,9 +543,7 @@
                       <div id="form22" class="carousel-item">
                         <input id="car" name="car" type="name" class="form-control my-3 p-3" placeholder="Car Brand/Model/Color" value="<?php if (isset($car)) { echo $car; } ?>">
                         <input id="ads" name="ads" type="name" class="form-control my-3 p-3" placeholder="How did you hear about us?" value="<?php if (isset($ads)) { echo $ads; } ?>">
-                        <textarea name="msg" id="msg" class="form-control my-3 p-3" rows="5" placeholder="Describe your driving routine">
-                          <?php if (isset($msg)) { echo $msg; } ?>
-                        </textarea>
+                        <textarea name="msg" id="msg" class="form-control my-3 p-3" rows="5" placeholder="Describe your driving routine"><?php if (isset($msg)) { echo $msg; } ?></textarea>
                         <div class="d-flex">
                           <button type="button" class="col btn2-silver p-3 fw-bold" data-bs-target="#formtwo" data-bs-slide-to="0">Previous</button>
                           <button type="button" class="col button2 p-3 fw-bold" data-bs-target="#formtwo" data-bs-slide-to="2">Next</button>
