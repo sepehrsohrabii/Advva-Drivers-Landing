@@ -117,7 +117,7 @@
                 </button>
                 <div class="navbar-new" id="toggle-nav">
                   <ul id="navlinks">
-                    <li><a data-text="1" href="#">Become Partner</a></li>
+                    <li><a data-text="1" href="https://demobusiness.advva.com">Become Partner</a></li>
                     <li><a data-text="2" href="#">Become Driver</a></li>
                     
                   </ul>
