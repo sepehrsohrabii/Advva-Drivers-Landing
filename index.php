@@ -103,7 +103,7 @@
                 <img src="/img/Logo.svg" height="60px" alt="Advva Drivers Logo">
               </div>
               <div class="col align-self-center text-end d-none d-md-inline">
-                <a href=""><b>Become Partner</b></a>
+                <a href="https://demobusiness.advva.com"><b>Become Partner</b></a>
                 <img class="mx-3" src="/img/H-Line.svg" alt="Seperator Line">
                 <a href=""><b class="text-secondary">Become Driver</b></a>
               </div>
