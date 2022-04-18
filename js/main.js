@@ -450,6 +450,27 @@ galleryRows.forEach((el, index) => {
     y: -50,
     duration: 2
   });
+  gsap.from(".section-38", {
+    scrollTrigger: {
+      trigger: ".section-38",
+      toggleActions: "play reverse play reverse",
+      scrub: 1,
+      end: "center center"
+    },
+    x: -500,
+    duration: 1
+  });
+  gsap.from(".section-39", {
+    scrollTrigger: {
+      trigger: ".section-39",
+      toggleActions: "play reverse play reverse",
+      scrub: 1,
+      end: "center center"
+    },
+    x: +500,
+    duration: 1
+  });
+  
   /*
   gsap.from(".section-38", {
     scrollTrigger: {

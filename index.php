@@ -144,7 +144,8 @@
           <div class="section-1 container mt-5 vh-100 d-flex align-items-center justify-content-center" id="smooth-wrapper">
             <div class="row justify-content-center" id="smooth-content">
               <h1 class="text-center mt-5">MONTHLY INCOME</br>DRIVING WITH ADVVA</h1>
-              <a class="button1 mt-5 py-2 px-5" href="#sign_up">Become a Driver</a>
+              <a class="dl-button mt-5" href="#"><img src="/img/google-play.png" alt="Google Play Download Button" height="60"></a>
+              <a class="dl-button mt-5" href="#"><img src="/img/App-Store.svg" alt="App Store Download Button" height="60"></a>
             </div>
           </div>
           <!-- Form Section -->
@@ -249,6 +250,12 @@
           <!-- Full width mobiles app picture-->
           <div class="section-4 section-19 text-center mbapp-pic mx-md-5 px-md-5">
             <img src="/img/Mobile-App.png" alt="Advva Mobile App">
+          </div>
+          <div class="container pb-5">
+            <div class="row justify-content-center dl-mt-n mb-5 pb-5 overflow-hidden">
+              <a class="dl-button mt-5 section-38" href="#"><img src="/img/google-play.png" alt="Google Play Download Button" height="60"></a>
+              <a class="dl-button mt-5 section-39" href="#"><img src="/img/App-Store.svg" alt="App Store Download Button" height="60"></a>
+            </div>
           </div>
           <!-- How it works Section -->
           <div class="section-5 banner1 py-5">

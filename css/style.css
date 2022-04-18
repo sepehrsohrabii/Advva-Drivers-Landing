@@ -238,11 +238,11 @@ h6{
   border: none;
   border-radius: 0;
 }
-.button1{
-  color: white;
-  background-color: #00662F;
+.dl-button{
   max-width: fit-content !important;
-  border: none;
+}
+.dl-mt-n{
+  margin-top: -10%;
 }
 .button2{
   color: white;
