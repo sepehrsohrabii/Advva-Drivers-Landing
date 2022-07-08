@@ -376,7 +376,8 @@
           <!-- SingUp Banner -->
           <div class="section-8 banner3 text-center my-5 py-5">
             <h4 class="fw-bold white mt-5 p-5">Don’t miss your next opportunity!</h4>
-            <a href="#sign_up2"><button class="section-28 button1 mb-5 mt-4 py-2 px-5" href="#sign_up2">Sign up today</button></a>
+            <a href="#
+            2"><button class="section-28 button1 mb-5 mt-4 py-2 px-5" href="#sign_up2">Sign up today</button></a>
           </div>
           <!-- Video Section -->
           <div class="section-9 container my-5 py-5">
